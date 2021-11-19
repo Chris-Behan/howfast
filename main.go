@@ -1,0 +1,5 @@
+package howfast
+
+func main() {
+
+}
