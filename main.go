@@ -1,5 +1,0 @@
-package howfast
-
-func main() {
-
-}
