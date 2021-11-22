@@ -40,6 +40,19 @@ func TestTimerStop(t *testing.T) {
 	}
 }
 
+func TestTimerClear(t *testing.T) {
+	timer := Timer{}
+	timer.Start()
+	timer.Stop()
+	timer.Clear()
+	if !timer.start.IsZero() {
+		t.Fatalf("expected timer.start to have a zero value after timer.Clear()")
+	}
+	if !timer.stop.IsZero() {
+		t.Fatalf("expected timer.stop to have a zero value after timer.Clear()")
+	}
+}
+
 func TestSecondsElapsed(t *testing.T) {
 	timer := Timer{}
 	timer.Start()
